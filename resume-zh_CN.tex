@@ -1,0 +1,131 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{\color{darkgray}张润丰}
+
+% {E-mail}{mobilephone}{homepage}
+% be careful of _ in emaill address
+\contactInfo{(+86) 151-0105-8016}{fengchuimuhua08@163.com}{高级算法工程师}{GitHub @RunfengZhang}
+% {E-mail}{mobilephone}
+% keep the last empty braces!
+%\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
+ 
+\section{\color{darkgray}个人总结}
+本人有丰富的互联网算法研发经验，工作认真负责，待人友好真诚，几段工作经历中均得到指导同事、上级/同级同事认可好评。对\textbf{传统机器学习}、\textbf{强化学习} 以及 \textbf{深度学习}、\textbf{大模型方向}有着浓厚兴趣以及持续性探索，在搜索、推荐和NLP等场景均有涉猎，自我驱动力强且热爱尝试新事物。\textbf{现任职于快手科技。}
+
+% \section{\color{darkgray} \faGraduationCap\ 教育背景}
+\section{\color{darkgray} 教育背景}
+\datedsubsection{\textbf{清华大学},软件学院-软件工程,\textit{工学硕士}}{2012.9 - 2015.6}
+\ 研究方向：机器学习、模式识别、NLP相关统计学习方法、深度学习等
+% \ \textbf{排名11/133(前10\%)},中国科学院大学学业奖学金(2次),IEEE Student member,预计2018年6月毕业
+\datedsubsection{\textbf{清华大学},软件学院-计算机软件,\textit{工学学士}}{2008.8 - 2012.7}
+% \ \textbf{排名2/62(前5\%)},国家励志奖学金,人民奖学金(7次),科技竞赛奖(2次),北京市普通高等学校优秀毕业生,北京理工大学优秀毕业生,软件学院金牌毕业生,优秀团员/优秀学生(5次)
+% \datedsubsection{\textbf{荷兰 莱顿大学},计算机科学与技术,\textit{国家留学基金委公派交换生}}{2015.3 - 2015.5}
+% \ 2014年中国政府奖学金(\textit{http://www.csc.edu.cn/}),DID-ACTE项目交换生(\textit{http://did-acte.org/})
+
+% \end{itemize}
+
+% \section{\color{darkgray}\faIndustry\ 工作经历}
+\section{\color{darkgray} 工作经历}
+\datedsubsection{\textbf{快手 | Kwai 风控算法中心}}{2023.11-至今}
+\role{高级算法工程师}{ E11(K4B) }
+\begin{itemize}
+  \item 风控内容识别算法负责人，带领4-5人团队针对快手风控内容识别算法进行持续优化迭代，识别模型应用于快手平台用户评论、搜索、上传视频的审核与治理
+  \item \textbf{NLP识别能力建设}：带领团队搭建了一套快手评论场景使用的多标签模型，覆盖业务预定义风险（\textit{如涉政、违法违规等}）、情绪体系、攻击性、正负向等，在纯文本BERT-based模型中引入了业务场景信息，大幅提高了识别模型准召（\textit{Benchmark各个违规类别下均能做到准确不变召回增加5-10pp}）。与团队成员探索出了一套有效的基于LLM的标注方案，经过少量数据SFT+人类对齐后模型准召效果优于BERT-based识别模型，训练对齐后的LLM用于BERT-based模型初期训练数据快速生成
+  \item \textbf{CV识别能力建设}：带领团队为色情、血腥暴力两大场景构建了「原子标签体系」（\textit{原子标签如比基尼、臀部特写等}），形成完整的借助大模型进行的标签体系构建以及数据标注Pipeline。基于打标数据集，采用开源识别框架RAM++训练得到原子标签识别模型，Benchmark上各标签准召均有提升。后续推动团队从0到1搭建「Human-In-The-Loop」回路，模型预测结果为人工标注提供辅助参考，提升了标注质量与效率，新增人工标注结果则进一步优化了模型指标
+  \item 上述迭代优化的NLP、CV识别能力与业内SOTA风控解决方案产品效果对比，在快手平台数据上均有明显优势，有效支持了搜索、评论、直播、视频审核等多个风控核心业务
+\end{itemize}
+
+\datedsubsection{\textbf{微软亚洲工程院 | Microsoft, WebXT/Bing\texttrademark}}{2021.05-2023.11}
+\role{高级机器学习科学家}{Senior Machine Learning Scientist (64)}
+\begin{itemize}
+  \item 作为v-Team Lead，指导5位同事组成的跨国团队，从0到1搭建了必应\texttrademark \textbf{搜索个性化召回和粗排Path}，该召回Path对必应\texttrademark 搜索指标\textbf{DAU小幅提升}
+  \item 作为TechLead，负责必应\texttrademark 搜索Top1结果下方 Explore Further 模块结果召回的\textbf{CF算法迭代优化}
+\end{itemize}
+
+\datedsubsection{\textbf{美团 | MeiTuan, 到家事业部}}{2017.9-2021.5}
+\role{高级算法工程师}{(3-2)}
+\begin{itemize}
+  \item 作为\textbf{方向负责人指导4-5名成员}负责美团外卖配送业务中\textbf{商户配送范围}、\textbf{订单履约保障（爆单）系统}两个方向的模型研发和迭代工作
+  \item 美团外卖\textbf{商家配送范围}生成系统为美团平台入驻的百万量级商家自动生成独立的可配送区域，系统采用机器学习+运筹优化 模式，\textbf{显著提升了平台履约规模}，相关工作论文被\textbf{KDD'20长文录用}
+  \item 美团外卖\textbf{订单履约保障（爆单）系统}能够全托管/半托管应对恶劣天气、交通管制等场景，日影响\textbf{百万量级}订单，有效保障了美团外卖的用户/骑手体验
+\end{itemize}
+
+\datedsubsection{\textbf{北京电子工程总体研究所}}{2015.8-2017.9}
+\role{算法工程师}{}
+\begin{itemize}
+  \item 参与\textbf{辅助驾驶系统}课题原型系统开发。该系统主要基于单目摄像头捕捉图像并利用语义分割模型对道路可行驶区域进行识别。本人在项目中负责项目中的语义分割模型的研发以及模型压缩等工作
+\end{itemize}
+
+% \section{\color{darkgray}\faCogs\ 工作技能}
+\section{\color{darkgray} 工作技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.2ex]
+  \item \textbf{编程语言}: 熟练掌握 Python, Java, C, 精通数据结构与算法
+  \item \textbf{数据开发}: 熟练掌握 Hive SQL, Spark, Numpy, Pandas, Matplotlib 等数据开发/分析/可视化工具
+  \item \textbf{机器学习基础及框架}: 精通机器学习 / 深度学习 / 强化学习模型，以及 PyTorch / Scikit-Learn 等框架
+  \item \textbf{关键词}: 具有扎实的数学基础和良好的英语能力（TOEFL 102, GRE 325+4.0）
+\end{itemize}
+
+% \datedsubsection{\textbf{DID-ACTE} 荷兰莱顿}{2015年3月 - 2015年6月}
+% \role{本科毕业设计}{LIACS 交换生}
+% 利用结巴分词对中国古文进行分词与词性标注，用已有领域知识训练形成 classifier 并对结果进行调优
+% \begin{onehalfspacing}
+% \begin{itemize}
+%   \item 利用结巴分词对中国古文进行分词与词性标注
+%   \item 利用已有领域知识训练形成 classifier, 并用分词结果进行测试反馈
+%   \item 尝试不同规则，对 classifier 进行调优
+% \end{itemize}
+% \end{onehalfspacing}
+
+% \section{\faHeartO\ 项目/作品摘要}
+% \section{项目/作品摘要}
+% \datedline{\textit{An Integrated Version of Security Monitor Vis System}, https://hijiangtao.github.io/ss-vis-component/ }{}
+% \datedline{\textit{Dark-Tech}, https://github.com/hijiangtao/dark-tech/ }{}
+% \datedline{\textit{融合社交网络数据挖掘的电视节目可视化分析系统}, https://hijiangtao.github.io/variety-show-hot-spot-vis/}{}
+% \datedline{\textit{LeetCodeOJ Solutions}, https://github.com/hijiangtao/LeetCodeOJ}{}
+% \datedline{\textit{Info-Vis}, https://github.com/ISCAS-VIS/infovis-ucas}{}
+
+\section{\color{darkgray}获得奖项}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.2ex]
+  \item 清华大学学业优秀奖学金、清华之友-RIM无线研究奖学金、清华大学综合奖学金
+  \item 美团2018年半年集团管理突破奖
+  \item 美团2019年配送进阶成果奖
+  \item 美团2020年超群技术奖
+  \item 美团期间积累配送相关专利十余项，获得美团「\textbf{专利达人}」称号
+\end{itemize}
+
+\section{\color{darkgray}论文发表}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.2ex]
+  \item \textbf{Delivery Scope: A New Way of Restaurant Retrieval for On-demand Food Delivery Service.} Ding Xuetao, Zhang Runfeng, Mao Zhen, et al. Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining, 2020.
+  \item \textbf{A New Multi-Channels Sequence Recognition Framework Using Deep Convolutional Neural Network.} Runfeng Zhang, Chunping Li, Daoyuan Jia. INNS Conference on Big Data, San Francisco, 2015.
+\end{itemize}
+
+
+% \section{\faInfo\ 社会实践/其他}
+% \section{社区参与/实践其他}
+% % increase linespacing [parsep=0.5ex]
+% \begin{itemize}[parsep=0.2ex]
+%   \item 乐于参与开源社区讨论,\textbf{参与翻译 Vue.js, webpack, WebAssembly, Babel 文档，印记中文成员}
+%   \item 中国科学院大学2016秋季学期可视化与可视分析课程助教，\textit{http://vis.ios.ac.cn/infovis-ucas/}
+%   \item 未来论坛学生会成员、北理社联新闻信息中心主任、北理工软件学院学生会宣传部副部长(2012-2016)
+%   \item 2013-2015 北京市共青团“温暖衣冬”志愿者,第九届园博会志愿者,2014 FLL机器人世锦赛志愿者
+% \end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
